@@ -1,11 +1,6 @@
-# ❤️ Heart Disease Detection
-
-A **Logistic Regression + SMOTE** model for heart disease risk prediction,
-served through a **Streamlit** web UI.
-
----
-
-## 📁 File Structure
+Heart  Disease Detection using ML uses smote and LR
+Just a student project
+File Structure
 
 ```
 heart_disease_detection/
@@ -17,60 +12,8 @@ heart_disease_detection/
 ├── model.pkl               ← Trained LR model
 ├── label_encoders.pkl      ← Fitted LabelEncoders for categoricals
 └── scaler.pkl              ← Fitted StandardScaler
-```
 
----
-
-## ⚙️ Local Setup
-
-```bash
-# 1. Clone / download repo
-# 2. Install dependencies
-pip install -r requirements.txt
-
-# 3. (Re-)train the model — only needed if .pkl files are missing
-python train.py
-
-# 4. Launch the app
-streamlit run app.py
-```
-
----
-
-## ☁️ Deploy on Streamlit Cloud
-
-1. **Push all files to a public GitHub repo**, including the `.pkl` files and `test_data.csv`.
-   > The `.pkl` files are committed intentionally — Streamlit Cloud has no persistent filesystem, so the trained model must live in the repo.
-
-2. Go to [share.streamlit.io](https://share.streamlit.io) → **New App**.
-
-3. Fill in:
-   - **Repository**: `your-username/heart-disease-detection`
-   - **Branch**: `main`
-   - **Main file path**: `app.py`
-
-4. Click **Deploy**. Streamlit Cloud will run `pip install -r requirements.txt` automatically.
-
----
-
-## 🔬 Model Details
-
-| Detail | Value |
-|--------|-------|
-| Algorithm | Logistic Regression |
-| Imbalance handling | SMOTE (oversampling) |
-| Dataset size | 10,000 rows |
-| Class split (original) | 80% / 20% |
-| Train/Test split | 80% / 20% (stratified) |
-| Features | 20 |
-| Target | Heart Disease Status |
-
-> **Honest note:** The dataset is imbalanced and the raw accuracy reflects that.
-> Results are presented as-is — no post-hoc tuning to inflate metrics.
-
----
-
-## ⚠️ Disclaimer
+ Disclaimer
 
 This is an **educational / research project** only.  
 It is **not** a medical diagnostic tool.  
